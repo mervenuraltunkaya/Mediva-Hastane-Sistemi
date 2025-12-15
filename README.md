@@ -90,6 +90,6 @@ Bu proje, **modern mobil ve backend teknolojileri**, **Clean Architecture** yakl
 **Mervenur Altunkaya**  
 
 📧 **E-posta:** mervenuraltunkaya1@gmail.com  
-🔗 🔗 **LinkedIn:** [Profilim](www.linkedin.com/in/mervenur-altunkaya-/)  
+🔗 🔗 **LinkedIn:** [Profilim](www.linkedin.com/in/mervenur-altunkaya-)  
 
 
