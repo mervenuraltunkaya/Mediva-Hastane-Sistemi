@@ -1,147 +1,95 @@
-🏥 Mediva – Hastane Randevu ve Sonuç Takip Sistemi
+# 🏥 Mediva – Hastane Randevu ve Sonuç Takip Sistemi
 
-Mediva, hastalar için geliştirilmiş kapsamlı bir Mobil Hastane Yönetim Uygulamasıdır. Kullanıcılar bu uygulama üzerinden hastane randevularını alabilir, laboratuvar ve radyoloji sonuçlarını görüntüleyebilir ve sağlık süreçlerini takip edebilirler.
+**Mediva**, hastalar için geliştirilen, randevu alma ve tıbbi sonuçları tek bir platformdan takip etmeyi sağlayan **Full-Stack mobil hastane yönetim uygulamasıdır**.  
+Bu proje, **modern mobil ve backend teknolojileri**, **Clean Architecture** yaklaşımı ve **gerçek hayata yakın senaryolar** esas alınarak geliştirilmiştir.
 
-Proje, modern yazılım mimarileri kullanılarak Full-Stack (Uçtan Uca) bir çözüm olarak geliştirilmiştir.
+> 🎯 **Amaç:**  
+> Sağlık sektöründe ölçeklenebilir, güvenli ve kullanıcı odaklı bir mobil uygulama mimarisi ortaya koymak.
 
-🚀 Özellikler
+---
 
-🔐 Kimlik Doğrulama (Authentication)
+## 🔍 Proje Özeti
 
-Kayıt Ol: Ad, Soyad, TC Kimlik No, Telefon, Doğum Tarihi ve Uyruk bilgileriyle güvenli kayıt.
+- **Platform:** Mobile (Flutter) + RESTful API
+- **Mimari:** Clean Architecture (Data / Domain / Presentation)
+- **Yetkinlik Alanları:**  
+  - Mobil Uygulama Geliştirme (Flutter)  
+  - Backend API Geliştirme (ASP.NET Core)  
+  - Kimlik Doğrulama & Güvenlik  
+  - Veritabanı Tasarımı  
+  - Push Notification & Localization  
 
-Giriş Yap: JWT (JSON Web Token) tabanlı güvenli oturum yönetimi.
+---
 
-Şifremi Unuttum: E-posta doğrulama kodu ile güvenli şifre sıfırlama.
+## 🚀 Öne Çıkan Özellikler
 
-Beni Hatırla: Otomatik oturum yenileme ve token saklama.
+### 🔐 Authentication & Security
+- JWT tabanlı kullanıcı kimlik doğrulama
+- HMACSHA512 ile güvenli parola hashleme
+- E-posta doğrulama kodu ile şifre sıfırlama
+- Token saklama ve otomatik oturum yenileme
 
-📅 Randevu Sistemi
+### 📅 Akıllı Randevu Yönetimi
+- Şube ➜ Poliklinik ➜ Doktor ➜ Tarih ➜ Saat hiyerarşisi
+- Backend üzerinden anlık dolu saat kontrolü
+- Aktif / geçmiş randevu ayrımı
+- İptal edilen randevularda saatlerin otomatik açılması
 
-Akıllı Randevu: Şube ➔ Poliklinik ➔ Doktor ➔ Tarih ➔ Saat hiyerarşisiyle kolay seçim.
+### 🧪 Tıbbi Sonuç Takibi
+- Laboratuvar sonuçlarının referans aralıklarıyla gösterimi
+- Normal / Anormal durum analizi
+- Radyoloji raporlarının PDF formatında uygulama içinden görüntülenmesi
+- Arama ve filtreleme yetenekleri
 
-Canlı Kontrol: Dolu saatlerin backend üzerinden anlık kontrolü (Dolu saatler pasif gelir).
+### 🔔 Push Notification Sistemi
+- Firebase Cloud Messaging (FCM) entegrasyonu
+- Randevu alındığında ve iptal edildiğinde anlık bildirim
+- Bildirim geçmişi ve okundu bilgisi
+- UI üzerinde badge (kırmızı nokta) gösterimi
 
-Randevularım: Gelecek ve Geçmiş randevuların ayrı sekmelerde listelenmesi.
+### ⚙️ Kullanıcı Deneyimi & Ayarlar
+- Türkçe 🇹🇷 / İngilizce 🇺🇸 çoklu dil desteği
+- Dinamik tema sistemi (Mavi, Kırmızı, Yeşil, Siyah)
+- Admin taraflı TXT dosyasıyla toplu veri yükleme simülasyonu
 
-İptal Etme: Randevu iptal edildiğinde sistemden silinir ve saat boşa çıkar.
+---
 
-🧪 Sonuç Görüntüleme
+## 🛠️ Kullanılan Teknolojiler
 
-Laboratuvar Sonuçları: Tahlil sonuçlarının detaylı listesi, referans aralıkları ve durum (Anormal/Normal) gösterimi.
+### 📱 Mobile – Flutter
+- **State Management:** BLoC / Cubit
+- **Networking:** Dio
+- **Architecture:** Clean Architecture
+- **Localization:** intl, flutter_localizations
+- **Notifications:** firebase_messaging
+- **Local Storage:** shared_preferences
 
-Radyoloji Raporları: Görüntüleme raporlarının listelenmesi ve PDF olarak uygulama içinde açılması.
+### 🖥️ Backend – ASP.NET Core 8.0
+- **API Type:** RESTful Web API
+- **Authentication:** JWT
+- **Security:** HMACSHA512 Password Hashing
+- **Database:** PostgreSQL (Entity Framework Core)
+- **Services:** SMTP Mail Service, Firebase Admin SDK
+- **Extras:** Data Seeding, Role-based yapı
 
-Filtreleme: Hastane bazlı, isme göre arama ve duruma göre filtreleme.
+---
 
-🔔 Bildirim Sistemi (Push Notifications)
+## 🧠 Kazanılan Yetkinlikler
 
-Firebase (FCM) Entegrasyonu: Randevu alındığında veya iptal edildiğinde telefona anlık bildirim düşer.
+- Full-Stack mobil uygulama geliştirme deneyimi
+- Clean Architecture prensiplerinin pratikte uygulanması
+- Gerçek hayat senaryolarına uygun API tasarımı
+- Güvenli authentication & authorization süreçleri
+- Flutter + ASP.NET Core entegrasyonu
+- Bildirim, localization ve tema yönetimi
 
-Bildirim Geçmişi: Tüm bildirimler veritabanında saklanır ve uygulama içinden görüntülenebilir.
+---
 
-Okundu Takibi: Yeni bildirimler için Dashboard üzerinde kırmızı nokta (Badge) gösterimi.
+## 👩‍💻 Geliştirici
 
-⚙️ Ayarlar ve Altyapı
+**Mervenur Altunkaya**  
 
-Çoklu Dil (Localization): Türkçe 🇹🇷 ve İngilizce 🇺🇸 desteği (Uygulama içinden anlık geçiş).
+📧 **E-posta:** mervenuraltunkaya1@gmail.com  
+🔗 🔗 **LinkedIn:** [Profilim](www.linkedin.com/in/mervenur-altunkaya-/)  
 
-Dinamik Tema: Renk değiştirme özelliği (Mavi, Kırmızı, Yeşil, Siyah tema seçenekleri).
 
-Veri Yükleme (Admin): TXT dosyası ile toplu laboratuvar sonucu yükleme simülasyonu.
-
-🛠️ Teknolojiler ve Mimari
-
-Bu proje Clean Architecture prensiplerine sadık kalınarak geliştirilmiştir.
-
-📱 Frontend (Mobil) - Flutter
-
-State Management: BLoC / Cubit
-
-Architecture: Clean Architecture (Data, Domain, Presentation Layers)
-
-HTTP Client: Dio
-
-Localization: flutter_localizations, intl
-
-Notifications: firebase_messaging
-
-Storage: shared_preferences
-
-🖥️ Backend (API) - ASP.NET Core 8.0 Web API
-
-Database: PostgreSQL (Entity Framework Core)
-
-Authentication: JWT (JSON Web Token)
-
-Security: Password Hashing (HMACSHA512)
-
-Services: SMTP Email Service, Firebase Admin SDK
-
-Data Seeding: Başlangıç verilerinin otomatik yüklenmesi.
-
-📸 Ekran Görüntüleri
-
-Giriş Ekranı
-
-Dashboard
-
-Randevu Alma
-
-
-
-
-
-
-
-Randevularım
-
-Laboratuvar
-
-Ayarlar
-
-
-
-
-
-
-
-(Not: Ekran görüntülerini screenshots klasörüne eklemeyi unutmayın)
-
-🏗️ Kurulum ve Çalıştırma
-
-Gereksinimler
-
-Flutter SDK (3.x veya üzeri)
-
-.NET 8.0 SDK
-
-PostgreSQL Veritabanı
-
-Bir IDE (VS Code veya Android Studio)
-
-1. Backend Kurulumu
-
-cd Mediva.API
-# appsettings.Development.json dosyasındaki DB ve Mail ayarlarını yapın.
-dotnet restore
-dotnet ef database update
-dotnet run
-
-
-2. Frontend (Mobil) Kurulumu
-
-cd mediva
-flutter pub get
-# Dil dosyalarını üretmek için:
-flutter gen-l10n
-flutter run
-
-
-📞 İletişim
-
-Geliştirici: Mervenur Altunkaya
-
-LinkedIn: Profilim
-
-E-posta: mervenuraltunkaya1@gmail.com
